@@ -1,6 +1,17 @@
 // `src/components/BurgerStack.jsx`
-const BurgerStack = (props) => {
-    return <ul>// map through props.ingredients</ul>;
+import { useState } from "react";
+
+const BurgerStack = ({stack, removeFromBurger}) => {
+    return (
+      <ul>
+        {stack.map((ingredient, index) => {
+          <li key={index} style={{backgroundColor: ingredient.color}}>
+            {ingredient.name}
+            <button onClick={() => removeFromBurger(ingredient)}>-</button>
+          </li>
+        })}
+      </ul>
+    )
   };
   
   export default BurgerStack;
