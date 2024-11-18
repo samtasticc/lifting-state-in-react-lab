@@ -31,13 +31,13 @@ const App = () => {
     setStack(updatedStack)
   }
   return (
-    <main>
+    <>
       <h1>Burger Stacker</h1>
       <section>
       <IngredientList availableIngredients={availableIngredients} addToBurger={addToBurger}/>
       <BurgerStack stack={stack} removeFromBurger={removeFromBurger}/>
       </section>
-    </main>
+    </>
   );
 };
 
